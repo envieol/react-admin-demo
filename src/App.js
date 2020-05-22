@@ -10,7 +10,10 @@ const handleClick = () => {
 function App() {
   return (
       <div>
-        <Button onClick={() => handleClick()}>click</Button>
+          <Button type="primary" onClick={()=>handleClick()}>Primary</Button>
+          <Button>Default</Button>
+          <Button type="dashed">Dashed</Button>
+          <Button type="link">Link</Button>
       </div>
   );
 }
