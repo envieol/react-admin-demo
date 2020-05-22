@@ -1,9 +1,16 @@
 import React from 'react';
+import {Button,message} from "antd";
+
+
+const handleClick = () => {
+    message.success("success")
+}
+
 
 function App() {
   return (
       <div>
-        App
+        <Button onClick={() => handleClick()}>click</Button>
       </div>
   );
 }
