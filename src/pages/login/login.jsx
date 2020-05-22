@@ -9,10 +9,10 @@ const Login = () => {
         <div className={"login"}>
             <header className={"login-header"}>
                 <img src={logo} alt={"logo"}/>
-                <h1>login</h1>
+                <h1>Login</h1>
             </header>
             <section className={"login-content"}>
-                <h2>用户登录</h2>
+                <h2>Sign In</h2>
                 <Form className={"login-form"}>
                     <Form.Item>
                         <Input prefix={<UserOutlined className="site-form-item-icon"/>} placeholder="Username"/>
@@ -22,7 +22,7 @@ const Login = () => {
                                placeholder="Password"/>
                     </Form.Item>
                     <Form.Item>
-                        <Button type="primary" htmlType="submit" className={"login-form-button"}> Log in </Button>
+                        <Button type="primary" htmlType="submit" className={"login-form-button"}> Login </Button>
                     </Form.Item>
                 </Form>
             </section>
