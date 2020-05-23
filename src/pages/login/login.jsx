@@ -23,11 +23,12 @@ const Login = () => {
         }
     }
 
-    const pwValidator =  (rule,value)=>{
-        if (!value || form.getFieldValue('password') === 'pw') {
+    const pwValidator = (rule,value)=>{
+        console.log(rule)
+        if (value === 'pw') {
             return Promise.resolve();
         }
-        return Promise.reject('password must be "pw"');
+        return Promise.reject('Password must be "pw"');
     }
 
     return (
@@ -51,7 +52,7 @@ const Login = () => {
                     </Form.Item>
                     <Form.Item
                         name="password"
-                        rules={[{ required: true, message: 'Please input your Password!' ,validator:pwValidator}]}
+                        rules={[{ required: true, message: 'Please input your Password!' },{validator:pwValidator}]}
                     >
                         <Input prefix={<LockOutlined className="site-form-item-icon"/>} type="password"
                                placeholder="Password"/>
